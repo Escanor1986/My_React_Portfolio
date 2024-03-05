@@ -1,6 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: 'Neon';
+  src: url('../Neon.ttf') format('truetype'); /* Remplacez './path/to/Neon.ttf' par le chemin réel du fichier */
+}
+
+body {
+  font-family: 'Neon', sans-serif;
+}
 
 /* logo.jsx */
 .logo-container {
@@ -20,4 +28,43 @@
   background-position: center;
   width: 100vw;
   height: 100vh;
+}
+
+/* Initial state of the mobile menu icon */
+.mobile-menu-icon {
+  display: none;
+}
+
+/* NavBar Mobile */
+@media (max-width: 960px) {
+  .mobile-navbar {
+    padding: 6px 12px;
+  }
+  .mobile-ul-navbar {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: medium;
+    font-weight: 700;
+  }
+  .navbar-left {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .navbar-right {
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: flex-start;
+  }
+
+  .navbar-li {
+    padding: 10px 0;
+  }
+
+  .navbar-button {
+    padding: 4px 8px;
+    border-radius: 25%;
+  }
 }
