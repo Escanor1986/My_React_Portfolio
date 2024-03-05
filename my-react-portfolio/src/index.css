@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* logo.jsx */
+.logo-container {
+  background-image: url('./assets/logo.webp');
+  width: 130px;
+  height: 130px;
+  box-shadow: inset 0 0 50px #29027a;
+  background-size: cover;
+  background-position: center;
+}

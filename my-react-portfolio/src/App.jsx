@@ -1,34 +1,28 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
-import './App.css';
-
-const HomePage = lazy(() => import('./pages/HomePage'));
-const AboutPage = lazy(() => import('./pages/AboutPage'));
+import routes from './routes';
+import Navbar from './components/Navbar/navbar';
+import Footer from './components/Footer/footer';
 
 function App() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <HashRouter>
-        <div>
-          <nav>
-            {/* Liens de navigation */}
-            <ul>
-              <li>
-                <a href="#/">Home</a>
-              </li>
-              <li>
-                <a href="#/about">About</a>
-              </li>
-              {/*autres liens de navigation ici */}
-            </ul>
-          </nav>
-
-          {/* Définition des routes */}
-          <Routes>
-            <Route path="/" element={<HomePage />} exact />
-            <Route path="/about" element={<AboutPage />} />
-            {/* autres routes ici */}
-          </Routes>
+        <div className="bg-bg_app bg-cover bg-no-repeat bg-center w-screen h-screen">
+          <Navbar />
+          <div className="">
+            <Routes>
+              {routes.map((route, index) => (
+                <Route
+                  key={index}
+                  path={route.path}
+                  element={route.element}
+                  exact={route.exact}
+                />
+              ))}
+            </Routes>
+          </div>
+          <Footer />
         </div>
       </HashRouter>
     </Suspense>
