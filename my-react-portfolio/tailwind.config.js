@@ -4,10 +4,6 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
-      backgroundImage: {
-        bg_app: "url('./src/assets/synthwave_bg_sun.jpg')",
-        logo: "url('./src/assets/logo.webp')"
-      },
       colors: {
         'text-border-lavande': '#C792EA',
         'text-border-white': '#E0E0E0',

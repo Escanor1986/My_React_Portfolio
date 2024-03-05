@@ -8,7 +8,7 @@ function App() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <HashRouter>
-        <div className="bg-bg_app bg-cover bg-no-repeat bg-center w-screen h-screen">
+        <div className="synthwave-background">
           <Navbar />
           <div className="">
             <Routes>

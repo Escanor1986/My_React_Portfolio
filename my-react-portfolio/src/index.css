@@ -11,3 +11,13 @@
   background-size: cover;
   background-position: center;
 }
+
+/*  Synthwave background App.jsx */
+.synthwave-background {
+  background-image: url('./assets/synthwave_bg_sun.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+}
