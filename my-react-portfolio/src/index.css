@@ -3,11 +3,21 @@
 @tailwind utilities;
 @font-face {
   font-family: 'Neon';
-  src: url('../Neon.ttf') format('truetype'); /* Remplacez './path/to/Neon.ttf' par le chemin réel du fichier */
+  src: url('../Neon.ttf') format('truetype');
 }
 
 body {
+  position: relative;
   font-family: 'Neon', sans-serif;
+  background-image: url('./assets/synthwave_bg_sun.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  background-attachment: fixed;
+  background-attachment: local;
+  width: 100vw;
+  height: 100vh;
 }
 
 /* logo.jsx */
@@ -26,6 +36,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: scroll;
+  background-attachment: fixed;
+  background-attachment: local;
   width: 100vw;
   height: 100vh;
 }
@@ -34,13 +47,107 @@ body {
 .mobile-menu-icon {
   display: none;
 }
+.font-awesome-icon {
+  -webkit-animation: flicker-2 2s linear infinite both;
+  animation: flicker-2 2s linear infinite both;
+}
+
+/* Mobile Menu Animation */
+@-webkit-keyframes flicker-2 {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  41.99% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0;
+  }
+  43% {
+    opacity: 0;
+  }
+  43.01% {
+    opacity: 1;
+  }
+  45.99% {
+    opacity: 1;
+  }
+  46% {
+    opacity: 0;
+  }
+  46.9% {
+    opacity: 0;
+  }
+  46.91% {
+    opacity: 1;
+  }
+  51.99% {
+    opacity: 1;
+  }
+  52% {
+    opacity: 0;
+  }
+  52.8% {
+    opacity: 0;
+  }
+  52.81% {
+    opacity: 1;
+  }
+}
+@keyframes flicker-2 {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  41.99% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0;
+  }
+  43% {
+    opacity: 0;
+  }
+  43.01% {
+    opacity: 1;
+  }
+  45.99% {
+    opacity: 1;
+  }
+  46% {
+    opacity: 0;
+  }
+  46.9% {
+    opacity: 0;
+  }
+  46.91% {
+    opacity: 1;
+  }
+  51.99% {
+    opacity: 1;
+  }
+  52% {
+    opacity: 0;
+  }
+  52.8% {
+    opacity: 0;
+  }
+  52.81% {
+    opacity: 1;
+  }
+}
 
 /* NavBar Mobile */
 @media (max-width: 960px) {
+  .mobile-menu-icon {
+    display: block;
+  }
   .mobile-navbar {
     padding: 6px 12px;
   }
   .mobile-ul-navbar {
+    display: none;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;

@@ -6,24 +6,20 @@ import Footer from './components/Footer/footer';
 
 function App() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div className="synthwave-background">Loading...</div>}>
       <HashRouter>
-        <div className="synthwave-background">
-          <Navbar />
-          <div className="">
-            <Routes>
-              {routes.map((route, index) => (
-                <Route
-                  key={index}
-                  path={route.path}
-                  element={route.element}
-                  exact={route.exact}
-                />
-              ))}
-            </Routes>
-          </div>
-          <Footer />
-        </div>
+        <Navbar />
+        <Routes>
+          {routes.map((route, index) => (
+            <Route
+              key={index}
+              path={route.path}
+              element={route.element}
+              exact={route.exact}
+            />
+          ))}
+        </Routes>
+        <Footer />
       </HashRouter>
     </Suspense>
   );
