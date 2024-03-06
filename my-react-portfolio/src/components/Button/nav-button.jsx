@@ -10,10 +10,10 @@ function NavButton(props) {
 
   return (
     <li className="navbar-li px-3 group">
-      <a href={props.href} className="block text-center">
+      <a href={props.href} className="h-full block text-center">
         <button
           onClick={handleClick}
-          className="navbar-button relative overflow-hidden p-4 bg-dark-bg border-2 border-rose-bg rounded-3xl shadow-lg transition-all duration-500 ease-in-out transform group-hover:scale-105"
+          className="navbar-button h-full relative overflow-hidden p-4 bg-dark-bg border-2 border-rose-bg rounded-3xl shadow-lg transition-all duration-500 ease-in-out transform group-hover:scale-105"
         >
           <span className="block relative z-10">{props.buttonText}</span>
           <div className="absolute inset-0 bg-rose-bg opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"></div>
